@@ -30,7 +30,7 @@ const MenuHeader = () => {
     <View style={styles.container}>
       <View
         style={{
-          flex: 1,
+          display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
         }}
@@ -42,9 +42,7 @@ const MenuHeader = () => {
             backgroundColor: '#D70018',
           }}
         >
-          <Text style={{ fontSize: 28, textAlign: 'center', margin: 10 }}>
-            Fading in
-          </Text>
+          <Text style={{ fontSize: 20, textAlign: 'center' }}>HEADER</Text>
         </FadeInView>
       </View>
     </View>

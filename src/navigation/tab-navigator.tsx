@@ -7,10 +7,9 @@ import type { ComponentType } from 'react';
 import * as React from 'react';
 import type { SvgProps } from 'react-native-svg';
 
+import { Settings, Style } from '@/screens';
 import Category from '@/screens/category';
 import { Home } from '@/screens/home';
-import Stores from '@/screens/stores';
-import User from '@/screens/user';
 import {
   Category as CategoryIcon,
   colors,
@@ -73,13 +72,13 @@ const tabs: TabType[] = [
   },
   {
     name: 'Stores',
-    component: Stores,
+    component: Style,
     label: 'Cửa hàng',
   },
 
   {
     name: 'User',
-    component: User,
+    component: Settings,
     label: 'Cá nhân',
   },
   // {

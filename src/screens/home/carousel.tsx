@@ -13,10 +13,10 @@ const CarouselSlider = () => {
     return (
       <View className="px-2" key={index}>
         <Image
-          contentFit="contain"
+          contentFit="cover"
           style={{
             borderRadius: 10,
-            width: WIDTH - 20,
+            width: WIDTH - 15,
             height: ScaleSize(170),
           }}
           source={{ uri: item.illustration }}
@@ -66,7 +66,7 @@ export default CarouselSlider;
 const styles = StyleSheet.create({
   container: {},
   paginationContainer: {
-    paddingVertical: 5, // Set your desired padding here
+    paddingVertical: ScaleSize(10), // Set your desired padding here
   },
   paginationDot: {
     width: 10,
