@@ -52,5 +52,10 @@ const MenuHeader = () => {
 export default MenuHeader;
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    // position: 'absolute',
+    // width: '100%',
+    // height: 136,
+    // backgroundColor: colors.primary[900],
+  },
 });

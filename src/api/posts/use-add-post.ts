@@ -8,7 +8,7 @@ type Variables = { title: string; body: string; userId: number };
 type Response = Post;
 
 export const useAddPost = createMutation<Response, Variables, AxiosError>(
-  async (variables) =>
+  async (variables: any) =>
     client({
       url: 'posts/add',
       method: 'POST',

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { StyleSheet } from 'react-native';
 
+import categoryService from '@/api/category';
 import CardBase from '@/components/card-base';
 import HeaderList from '@/components/header-list';
 import { ScrollView, View } from '@/ui';
@@ -75,6 +76,19 @@ const category2 = [
   },
 ];
 const Category = () => {
+  const [category, setCategory] = React.useState<any>();
+
+  const getAllCategory = () => {
+    categoryService
+      .getAll()
+      .then((res: any) => {
+        setCategory(res.Categories);
+      })
+      .catch((err) => {});
+  };
+  React.useEffect(() => {
+    getAllCategory();
+  }, []);
   return (
     <View style={styles.container}>
       <View className="mt-2" />
@@ -82,7 +96,7 @@ const Category = () => {
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         <View className="my-2 ml-1">
           <View style={{ display: 'flex', flexDirection: 'row' }}>
-            {category1.map((item) => (
+            {category?.map((item: any) => (
               <CardBase key={item.id} item={item} onPress={() => {}} />
             ))}
           </View>
@@ -104,6 +118,7 @@ const styles = StyleSheet.create({
   container: {
     marginHorizontal: 10,
   },
+
   title: {},
   item: {},
   image: {
