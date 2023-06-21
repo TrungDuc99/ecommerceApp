@@ -22,7 +22,7 @@ const HeaderList = ({
         {title}
       </Text>
       <TouchableOpacity>
-        <Text variant="lg">{titleViewDetail}</Text>
+        <Text variant="sm">{titleViewDetail}</Text>
       </TouchableOpacity>
     </View>
   );
@@ -35,6 +35,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     justifyContent: 'space-between',
     flexDirection: 'row',
+    alignItems: 'flex-end',
   },
   title: {
     textTransform: 'uppercase',

@@ -1,27 +1,52 @@
-import { Heart, Star1 } from 'iconsax-react-native';
+/* eslint-disable max-lines-per-function */
+
+import { Heart } from 'iconsax-react-native';
 import * as React from 'react';
 import { StyleSheet } from 'react-native';
 import { Card } from 'react-native-ui-lib';
 
 import { ScaleSize, Spacing } from '@/configs';
+import type { product } from '@/types';
 import { colors, Image, Text, TouchableOpacity, View } from '@/ui';
 
-type product = {
-  id: number;
-  productName: string;
-  price: string;
-  image: any;
-  cost: string;
-  tradePrice: string;
-};
+import Promotion from './promotion';
+import Rating from './rating';
 
 interface ProductCardProps {
   item: product;
+  typeProduct?:
+    | 'phone'
+    | 'laptop'
+    | 'tablet'
+    | 'pc'
+    | 'sounds'
+    | 'watch'
+    | 'smarthome'
+    | 'tv';
   onPress: (item: product) => void;
 }
 
-const ProductCard = ({ item, onPress }: ProductCardProps) => {
-  const { id, productName, tradePrice, cost, price, image } = item;
+const ProductCard = ({
+  item,
+  typeProduct = 'phone',
+  onPress,
+}: ProductCardProps) => {
+  const { id, productName, tradePrice, promotion, rating, cost, price, image } =
+    item;
+  const styles = StyleSheet.create({
+    card: {
+      width: ScaleSize(typeProduct === 'phone' ? 200 : 220),
+      marginVertical: Spacing(4),
+    },
+    containter: {
+      padding: Spacing(2),
+    },
+    footerCard: {
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'flex-end',
+    },
+  });
   const [liked, setLiked] = React.useState(false);
   return (
     <Card
@@ -33,9 +58,9 @@ const ProductCard = ({ item, onPress }: ProductCardProps) => {
     >
       <View style={styles.containter}>
         <Image
-          contentFit="cover"
+          contentFit="contain"
           source={{ uri: image }}
-          style={{ width: '100%', height: 200, marginVertical: Spacing(3) }}
+          style={{ width: '100%', height: 200, marginVertical: Spacing(1) }}
         />
         <Text variant="xs" className="text-left font-semibold">
           {productName}
@@ -69,13 +94,9 @@ const ProductCard = ({ item, onPress }: ProductCardProps) => {
             {tradePrice}đ
           </Text>
         </View>
-        <View className="my-3 flex flex-row">
-          <Star1 color="#f59e0b" size="15" variant="Bold" />
-          <Star1 color="#f59e0b" size="15" variant="Bold" />
-          <Star1 color="#f59e0b" size="15" variant="Bold" />
-          <Star1 color="#f59e0b" size="15" variant="Bold" />
-          <Star1 color="#f59e0b" size="15" variant="Bold" />
-        </View>
+        {promotion && <Promotion description={promotion} />}
+
+        <Rating rating={rating} maxRating={5} />
         <View style={styles.footerCard}>
           <View className="flex flex-row items-center justify-center">
             <Text variant="xs" className="mr-1 text-neutral-600 ">
@@ -97,17 +118,4 @@ const ProductCard = ({ item, onPress }: ProductCardProps) => {
 
 export default ProductCard;
 
-const styles = StyleSheet.create({
-  card: {
-    width: ScaleSize(200),
-    marginVertical: Spacing(4),
-  },
-  containter: {
-    padding: Spacing(2),
-  },
-  footerCard: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'flex-end',
-  },
-});
+/* eslint-enable max-lines-per-function */

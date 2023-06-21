@@ -4,22 +4,14 @@ import React, { useRef } from 'react';
 import {
   Animated,
   SafeAreaView,
+  ScrollView,
   StatusBar,
   StyleSheet,
   TextInput,
 } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
 
 import { colors, HEIGHT, Image, View } from '@/ui';
 
-import CarouselSlider from './carousel';
-import Category from './category';
-import FeaturedPhones from './featured-phones';
-import Laptops from './laptops';
-import OuterCategories from './outer-categories';
-import PaymentOffer from './payment-offer';
-import StandBanner from './permanent-banner';
-import TechNews from './tech-news';
 const AnimatedTextInput = Animated.createAnimatedComponent(TextInput);
 
 export const Home = () => {
@@ -27,7 +19,6 @@ export const Home = () => {
   const scrollViewRef = useRef<ScrollView>(null);
   const lastOffsetY = useRef(0);
   const scrollDirection = useRef('');
-
   const searchInputAnimation = {
     transform: [
       {
@@ -154,9 +145,6 @@ export const Home = () => {
       extrapolate: 'clamp',
     }),
   };
-  console.log('====================================');
-  console.log(lastOffsetY.current, scrollDirection.current);
-  console.log('====================================');
   return (
     <View className="flex-1 ">
       {/* <BannerTop />
@@ -256,10 +244,10 @@ export const Home = () => {
       </SafeAreaView>
 
       <ScrollView
+        showsVerticalScrollIndicator={false}
         ref={scrollViewRef}
         onScroll={(e) => {
           const offsetY = e.nativeEvent.contentOffset.y;
-
           scrollDirection.current =
             offsetY - lastOffsetY.current > 0 ? 'down' : 'up';
           lastOffsetY.current = offsetY;
@@ -275,14 +263,14 @@ export const Home = () => {
       >
         <View style={styles.paddingForHeader} />
         <View style={styles.scrollViewContent}>
-          <CarouselSlider />
+          {/* <CarouselSlider />
           <StandBanner />
           <Category />
           <FeaturedPhones />
           <Laptops />
           <OuterCategories />
           <PaymentOffer />
-          <TechNews />
+          <TechNews /> */}
         </View>
       </ScrollView>
     </View>
@@ -320,7 +308,7 @@ const styles = StyleSheet.create({
     height: LOWER_HEADER_HEIGHT,
   },
   scrollViewContent: {
-    height: HEIGHT * 3,
+    height: HEIGHT * 2,
     marginTop: 2,
     backgroundColor: 'white',
   },

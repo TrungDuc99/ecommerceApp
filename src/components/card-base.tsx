@@ -1,32 +1,48 @@
 import * as React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet } from 'react-native';
+import { Card } from 'react-native-ui-lib';
 
 import { ScaleSize, Spacing } from '@/configs';
-import { Image, Text, TouchableOpacity } from '@/ui';
+import { Image, Text, View } from '@/ui';
 
 interface CardBaseProps {
   item: {
-    id: any;
+    id: number;
     title: string;
-    Name?: string;
-    image: any;
+    decription: string;
+    image: string;
+    url: string;
   };
   onPress: (item: any) => void;
 }
 
 const CardBase = ({ item, onPress }: CardBaseProps) => {
-  const { title, id, image, Name } = item;
   return (
-    <View>
-      <View key={id} style={styles.container}>
-        <TouchableOpacity onPress={() => onPress(item)}>
-          <Image contentFit="cover" source={image} style={styles.image} />
-        </TouchableOpacity>
+    <Card
+      onPress={() => {
+        onPress && onPress(item);
+      }}
+    >
+      <View style={styles.container}>
+        <Image
+          contentFit="contain"
+          source={item.image}
+          style={{
+            width: '100%',
+            height: ScaleSize(100),
+            borderTopLeftRadius: 10,
+            borderTopRightRadius: 10,
+          }}
+        />
+        <Text
+          className="my-2 px-2 font-semibold "
+          numberOfLines={2}
+          variant="xs"
+        >
+          {item.decription}
+        </Text>
       </View>
-      <Text variant="xs" className="font-semibold" style={styles.title}>
-        {title || Name}
-      </Text>
-    </View>
+    </Card>
   );
 };
 
@@ -34,30 +50,12 @@ export default CardBase;
 
 const styles = StyleSheet.create({
   container: {
-    padding: 2,
+    padding: Spacing(1.5),
+    paddingBottom: Spacing(2),
+    borderRadius: 10,
     display: 'flex',
+    width: ScaleSize(180),
     justifyContent: 'center',
     alignItems: 'center',
-    marginRight: Spacing(3),
-    shadowColor: '#000000',
-    shadowOffset: {
-      width: 0,
-      height: 3,
-    },
-    shadowOpacity: 0.17,
-    shadowRadius: 3.05,
-    elevation: 20,
-  },
-  title: {
-    marginVertical: 10,
-    marginRight: 10,
-    textAlign: 'center',
-  },
-  item: {},
-  image: {
-    backgroundColor: '#fff',
-    borderRadius: 10,
-    width: ScaleSize(75),
-    height: ScaleSize(75),
   },
 });
