@@ -1,64 +1,76 @@
 export const CATEGORY1 = [
   {
     id: '1',
-    image: require('@/assets/images/category/icon-phone-tablet_1.png'),
+    image:
+      'https://cdn2.cellphones.com.vn/150x,webp,q70/media/catalog/product/i/c/icon-phone-tablet_1.png',
     title: `Điện thoại \n Tablet`,
   },
   {
     id: '2',
-    image: require('@/assets/images/category/menu-laptop-v2.png'),
+    image:
+      'https://cdn2.cellphones.com.vn/150x,webp,q70/media/catalog/product/m/e/menu-laptop-v2.png',
     title: 'Laptop',
   },
   {
     id: '3',
-    image: require('@/assets/images/category/dong-ho-may-anh.png'),
+    image:
+      'https://cdn2.cellphones.com.vn/150x,webp,q70/media/catalog/product/d/o/dong-ho-may-anh.png',
     title: 'Đồng hồ, \n Máy ảnh',
   },
   {
     id: '4',
-    image: require('@/assets/images/category/menu-audio-v2.png'),
+    image:
+      'https://cdn2.cellphones.com.vn/150x,webp,q70/media/catalog/product/m/e/menu-audio-v2.png',
     title: 'Âm thanh',
   },
   {
     id: '5',
-    image: require('@/assets/images/category/menu-smarthome.png'),
+    image:
+      'https://cdn2.cellphones.com.vn/150x,webp,q70/media/catalog/product/m/e/menu-smarthome.png',
     title: 'Nhà thông, \n minh',
   },
   {
     id: '6',
-    image: require('@/assets/images/category/menu-accessories.png'),
+    image:
+      'https://cdn2.cellphones.com.vn/150x,webp,q70/media/catalog/product/m/e/menu-accessories.png',
     title: 'Phụ kiện',
   },
 ];
 export const CATEGORY2 = [
   {
     id: '7',
-    image: require('@/assets/images/category/menu-pc-monitor.png'),
+    image:
+      'https://cdn2.cellphones.com.vn/150x,webp,q70/media/catalog/product/m/e/menu-pc-monitor.png',
     title: 'PC, \n Màn hình',
   },
   {
     id: '8',
-    image: require('@/assets/images/category/menu-tv.png'),
+    image:
+      'https://cdn2.cellphones.com.vn/150x,webp,q70/media/catalog/product/m/e/menu-tv.png',
     title: 'Tivi',
   },
   {
     id: '9',
-    image: require('@/assets/images/category/menu-old-product.png'),
+    image:
+      'https://cdn2.cellphones.com.vn/150x,webp,q70/media/catalog/product/m/e/menu-old-product.png',
     title: 'Thu cũ',
   },
   {
     id: '10',
-    image: require('@/assets/images/category/menu-trade_in.png'),
+    image:
+      'https://cdn2.cellphones.com.vn/150x,webp,q70/media/catalog/product/m/e/menu-trade_in.png',
     title: 'Hàng cũ',
   },
   {
     id: '11',
-    image: require('@/assets/images/category/menu-deal.png'),
+    image:
+      'https://cdn2.cellphones.com.vn/150x,webp,q70/media/tmp/catalog/product/t/_/t_i_xu_ng_-_2022-06-07t114601.808.png',
     title: `Khuyến mãi`,
   },
   {
     id: '12',
-    image: require('@/assets/images/category/sforum-news.png'),
+    image:
+      'https://cdn2.cellphones.com.vn/150x,webp,q70/media/catalog/product/s/f/sforum-news.png',
     title: 'Tin công nghệ',
   },
 ];
