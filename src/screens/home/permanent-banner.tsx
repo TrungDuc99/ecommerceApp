@@ -5,7 +5,7 @@ import { Image, View, WIDTH } from '@/ui';
 
 const StandBanner = () => {
   return (
-    <View className="items-center ">
+    <View className="mt-2 items-center">
       <Image
         style={{
           borderRadius: 10,

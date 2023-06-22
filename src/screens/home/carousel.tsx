@@ -66,7 +66,7 @@ export default CarouselSlider;
 const styles = StyleSheet.create({
   container: {},
   paginationContainer: {
-    paddingVertical: ScaleSize(10), // Set your desired padding here
+    paddingVertical: ScaleSize(5), // Set your desired padding here
   },
   paginationDot: {
     width: 10,

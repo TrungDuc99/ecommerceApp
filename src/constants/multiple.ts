@@ -41,53 +41,54 @@ export const TECH_NEWS = [
 export const ACCESSORIES1 = [
   {
     id: 1,
-    title: 'Accessories',
-    image: '',
+    title: 'Nổi bật',
+    image:
+      'https://cdn2.cellphones.com.vn/x/media/icons/category/cate-1644.svg',
   },
   {
     id: 2,
-    title: 'Accessories',
-    image: '',
+    title: 'Phụ kiện Apple',
+    image: 'https://cdn2.cellphones.com.vn/x/media/icons/category/cate-43.svg',
   },
   {
     id: 3,
-    title: 'Accessories',
-    image: '',
+    title: 'Dán màn \nhình',
+    image: 'https://cdn2.cellphones.com.vn/x/media/icons/category/cate-286.svg',
   },
   {
     id: 4,
-    title: 'Accessories',
-    image: '',
+    title: 'Ốp lưng - Bao da',
+    image: 'https://cdn2.cellphones.com.vn/x/media/icons/category/cate-108.svg',
   },
   {
     id: 5,
-    title: 'Accessories',
-    image: '',
+    title: 'Cáp, sạc',
+    image: 'https://cdn2.cellphones.com.vn/x/media/icons/category/cate-114.svg',
   },
   {
     id: 6,
-    title: 'Accessories',
-    image: '',
+    title: 'Pin dự phòng',
+    image: 'https://cdn2.cellphones.com.vn/x/media/icons/category/cate-122.svg',
   },
   {
     id: 7,
-    title: 'Accessories',
-    image: '',
+    title: 'Thiết bị mạng',
+    image: 'https://cdn2.cellphones.com.vn/x/media/icons/category/cate-676.svg',
   },
   {
     id: 8,
-    title: 'Accessories',
-    image: '',
+    title: 'Gaming Gear',
+    image: 'https://cdn2.cellphones.com.vn/x/media/icons/category/cate-669.svg',
   },
   {
     id: 9,
-    title: 'Accessories',
-    image: '',
+    title: 'Gimbal | Tay cầm chống rung',
+    image: 'https://cdn2.cellphones.com.vn/x/media/icons/category/cate-852.svg',
   },
   {
     id: 10,
-    title: 'Accessories',
-    image: '',
+    title: 'Thẻ nhớ,\n USB',
+    image: 'https://cdn2.cellphones.com.vn/x/media/icons/category/cate-109.svg',
   },
 ];
 export const ACCESSORIES2 = [

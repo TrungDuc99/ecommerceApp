@@ -4,7 +4,7 @@ import { StyleSheet } from 'react-native';
 import categoryService from '@/api/category';
 import CardBase from '@/components/card-category';
 import HeaderList from '@/components/header-list';
-import { CATEGORY2 } from '@/constants/category';
+import { CATEGORY1, CATEGORY2 } from '@/constants/category';
 import { ScrollView, View } from '@/ui';
 
 export type categoryType = {
@@ -35,8 +35,8 @@ const Category = () => {
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         <View className="my-2 ml-1">
           <View style={{ display: 'flex', flexDirection: 'row' }}>
-            {category?.map((item: any) => (
-              <CardBase key={item.Id} item={item} onPress={() => {}} />
+            {CATEGORY1?.map((item: any) => (
+              <CardBase key={item.id} item={item} onPress={() => {}} />
             ))}
           </View>
 

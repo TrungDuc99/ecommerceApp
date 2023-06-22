@@ -9,8 +9,9 @@ import {
   TextInput,
 } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
+import LinearGradient from 'react-native-linear-gradient';
 
-import { colors, HEIGHT, Image, View } from '@/ui';
+import { colors, Image, View } from '@/ui';
 
 import CarouselSlider from './carousel';
 import Category from './category';
@@ -51,7 +52,6 @@ export const Home = () => {
       extrapolate: 'clamp',
     }),
   };
-
   const featureNameAnimation = {
     transform: [
       {
@@ -154,9 +154,7 @@ export const Home = () => {
       extrapolate: 'clamp',
     }),
   };
-  console.log('====================================');
-  console.log(lastOffsetY.current, scrollDirection.current);
-  console.log('====================================');
+
   return (
     <View className="flex-1 ">
       {/* <BannerTop />
@@ -178,111 +176,126 @@ export const Home = () => {
       </SafeAreaView>
 
       <SafeAreaView style={styles.header}>
-        <View style={styles.upperHeader}>
-          <View style={styles.searchContainer}>
+        <LinearGradient
+          colors={['#D70019', '#D70019', '#ce505c']}
+          style={styles.linearGradient}
+        >
+          <View style={styles.upperHeader}>
+            <View style={styles.searchContainer}>
+              <Image
+                source={require('@/assets/images/momo/search.png')}
+                style={styles.searchIcon}
+              />
+              <AnimatedTextInput
+                placeholder="Tìm kiếm"
+                placeholderTextColor={'rgba(255, 255, 255, 0.8)'}
+                style={[styles.searchInput, searchInputAnimation]}
+              />
+            </View>
             <Image
-              source={require('@/assets/images/momo/search.png')}
-              style={styles.searchIcon}
+              source={require('@/assets/images/momo/bell.png')}
+              style={styles.bellIcon}
             />
-            <AnimatedTextInput
-              placeholder="Tìm kiếm"
-              placeholderTextColor={'rgba(255, 255, 255, 0.8)'}
-              style={[styles.searchInput, searchInputAnimation]}
+            <Image
+              source={require('@/assets/images/momo/avatar.png')}
+              style={styles.avatar}
             />
           </View>
-          <Image
-            source={require('@/assets/images/momo/bell.png')}
-            style={styles.bellIcon}
-          />
-          <Image
-            source={require('@/assets/images/momo/avatar.png')}
-            style={styles.avatar}
-          />
-        </View>
-        <View style={styles.lowerHeader}>
-          <Animated.View style={[styles.feature, depositViewAnimation]}>
-            <Animated.Image
-              source={require('@/assets/images/momo/deposit-circle.png')}
-              style={[styles.featureIconCircles, featureIconCircleAnimation]}
-            />
-            <Animated.Image
-              source={require('@/assets/images/momo/deposit.png')}
-              style={[styles.featureIcon, featureIconAnimation]}
-            />
-            <Animated.Text style={[styles.featureName, featureNameAnimation]}>
-              NẠP TIỀN
-            </Animated.Text>
-          </Animated.View>
-          <Animated.View style={[styles.feature, withdrawViewAnimation]}>
-            <Animated.Image
-              source={require('@/assets/images/momo/withdraw-circle.png')}
-              style={[styles.featureIconCircles, featureIconCircleAnimation]}
-            />
-            <Animated.Image
-              source={require('@/assets/images/momo/withdraw.png')}
-              style={[styles.featureIcon, featureIconAnimation]}
-            />
-            <Animated.Text style={[styles.featureName, featureNameAnimation]}>
-              RÚT TIỀN{' '}
-            </Animated.Text>
-          </Animated.View>
-          <Animated.View style={[styles.feature, qrViewAnimation]}>
-            <Animated.Image
-              source={require('@/assets/images/momo/qr-circle.png')}
-              style={[styles.featureIconCircles, featureIconCircleAnimation]}
-            />
-            <Animated.Image
-              source={require('@/assets/images/momo/qr.png')}
-              style={[styles.featureIcon, featureIconAnimation]}
-            />
-            <Animated.Text style={[styles.featureName, featureNameAnimation]}>
-              MÃ QR{' '}
-            </Animated.Text>
-          </Animated.View>
-          <Animated.View style={[styles.feature, scanViewAnimation]}>
-            <Animated.Image
-              source={require('@/assets/images/momo/scan-circle.png')}
-              style={[styles.featureIconCircles, featureIconCircleAnimation]}
-            />
-            <Animated.Image
-              source={require('@/assets/images/momo/scan.png')}
-              style={[styles.featureIcon, featureIconAnimation]}
-            />
-            <Animated.Text style={[styles.featureName, featureNameAnimation]}>
-              QUÉT MÃ{' '}
-            </Animated.Text>
-          </Animated.View>
-        </View>
+          <View style={styles.lowerHeader}>
+            <Animated.View style={[styles.feature, depositViewAnimation]}>
+              <Animated.Image
+                source={require('@/assets/images/momo/deposit-circle.png')}
+                style={[styles.featureIconCircles, featureIconCircleAnimation]}
+              />
+              <Animated.Image
+                source={require('@/assets/images/momo/deposit.png')}
+                style={[styles.featureIcon, featureIconAnimation]}
+              />
+              <Animated.Text style={[styles.featureName, featureNameAnimation]}>
+                NẠP TIỀN
+              </Animated.Text>
+            </Animated.View>
+            <Animated.View style={[styles.feature, withdrawViewAnimation]}>
+              <Animated.Image
+                source={require('@/assets/images/momo/withdraw-circle.png')}
+                style={[styles.featureIconCircles, featureIconCircleAnimation]}
+              />
+              <Animated.Image
+                source={require('@/assets/images/momo/withdraw.png')}
+                style={[styles.featureIcon, featureIconAnimation]}
+              />
+              <Animated.Text style={[styles.featureName, featureNameAnimation]}>
+                RÚT TIỀN{' '}
+              </Animated.Text>
+            </Animated.View>
+            <Animated.View style={[styles.feature, qrViewAnimation]}>
+              <Animated.Image
+                source={require('@/assets/images/momo/qr-circle.png')}
+                style={[styles.featureIconCircles, featureIconCircleAnimation]}
+              />
+              <Animated.Image
+                source={require('@/assets/images/momo/qr.png')}
+                style={[styles.featureIcon, featureIconAnimation]}
+              />
+              <Animated.Text style={[styles.featureName, featureNameAnimation]}>
+                MÃ QR{' '}
+              </Animated.Text>
+            </Animated.View>
+            <Animated.View style={[styles.feature, scanViewAnimation]}>
+              <Animated.Image
+                source={require('@/assets/images/momo/scan-circle.png')}
+                style={[styles.featureIconCircles, featureIconCircleAnimation]}
+              />
+              <Animated.Image
+                source={require('@/assets/images/momo/scan.png')}
+                style={[styles.featureIcon, featureIconAnimation]}
+              />
+              <Animated.Text style={[styles.featureName, featureNameAnimation]}>
+                QUÉT MÃ{' '}
+              </Animated.Text>
+            </Animated.View>
+          </View>
+        </LinearGradient>
       </SafeAreaView>
 
       <ScrollView
+        showsVerticalScrollIndicator={false}
         ref={scrollViewRef}
         onScroll={(e) => {
           const offsetY = e.nativeEvent.contentOffset.y;
-
           scrollDirection.current =
             offsetY - lastOffsetY.current > 0 ? 'down' : 'up';
           lastOffsetY.current = offsetY;
           animatedValue.setValue(offsetY);
         }}
-        onScrollEndDrag={() => {
-          scrollViewRef.current?.scrollTo({
-            y: scrollDirection.current === 'down' ? 100 : 0,
-            animated: true,
-          });
+        onScrollEndDrag={(e) => {
+          const offsetY = e.nativeEvent.contentOffset.y;
+
+          if (offsetY < 195) {
+            scrollViewRef.current?.scrollTo({
+              y: scrollDirection.current === 'down' ? 100 : 0,
+              animated: true,
+            });
+          }
         }}
         scrollEventThrottle={16}
       >
         <View style={styles.paddingForHeader} />
         <View style={styles.scrollViewContent}>
           <CarouselSlider />
-          <StandBanner />
-          <Category />
-          <FeaturedPhones />
-          <Laptops />
-          <OuterCategories />
-          <PaymentOffer />
-          <TechNews />
+          <View
+            style={{
+              backgroundColor: 'white',
+            }}
+          >
+            <StandBanner />
+            <Category />
+            <FeaturedPhones />
+            <Laptops />
+            <OuterCategories />
+            <PaymentOffer />
+            <TechNews />
+          </View>
         </View>
       </ScrollView>
     </View>
@@ -293,6 +306,12 @@ const LOWER_HEADER_HEIGHT = 96;
 const styles = StyleSheet.create({
   container: {
     marginHorizontal: 10,
+  },
+  linearGradient: {
+    flex: 1,
+    paddingLeft: 15,
+    paddingRight: 15,
+    borderRadius: 5,
   },
   upperHeaderPlaceholder: {
     height: 40,
@@ -320,9 +339,8 @@ const styles = StyleSheet.create({
     height: LOWER_HEADER_HEIGHT,
   },
   scrollViewContent: {
-    height: HEIGHT * 3,
+    // height: HEIGHT * 2,
     marginTop: 2,
-    backgroundColor: 'white',
   },
 
   searchContainer: {
