@@ -14,7 +14,7 @@ const StandBanner = () => {
         }}
         contentFit="cover"
         source={{
-          uri: 'https://cdn2.cellphones.com.vn/800x150,webp,q100/https://dashboard.cellphones.com.vn/storage/xa-kho-khet-special-mobile.png',
+          uri: 'https://cdn2.cellphones.com.vn/insecure/rs:fill:800:150/q:80/plain/https://dashboard.cellphones.com.vn/storage/banner-special-mobile-b2s-new.png',
         }}
       />
     </View>

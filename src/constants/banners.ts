@@ -3,49 +3,49 @@ export const ENTRIES1 = [
     title: 'Beautiful and dramatic Antelope Canyon',
     subtitle: 'Lorem ipsum dolor sit amet et nuncat mergitur',
     illustration:
-      'https://cdn2.cellphones.com.vn/690x300,webp,q100/https://dashboard.cellphones.com.vn/storage/hs-s23-plus-112.png',
+      'https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:80/plain/https://dashboard.cellphones.com.vn/storage/xiaomi-13t-seriess-sliding-1.jpg',
   },
   {
     title: 'Earlier this morning, NYC',
     subtitle: 'Lorem ipsum dolor sit amet',
     illustration:
-      'https://cdn2.cellphones.com.vn/690x300,webp,q100/https://dashboard.cellphones.com.vn/storage/sliding-ip14-pro-max-th66.png',
+      'https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:80/plain/https://dashboard.cellphones.com.vn/storage/690-300-max-rog-ally.jpg',
   },
   {
     title: 'White Pocket Sunset',
     subtitle: 'Lorem ipsum dolor sit amet et nuncat ',
     illustration:
-      'https://cdn2.cellphones.com.vn/690x300,webp,q100/https://dashboard.cellphones.com.vn/storage/camon-20-sliding-dathang.png',
+      'https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:80/plain/https://dashboard.cellphones.com.vn/storage/noi-com-cuckoo-gia-dung-sliding.jpg',
   },
   {
     title: 'Acrocorinth, Greece',
     subtitle: 'Lorem ipsum dolor sit amet et nuncat mergitur',
     illustration:
-      'https://cdn2.cellphones.com.vn/690x300,webp,q100/https://dashboard.cellphones.com.vn/storage/690-300-max-sliding-rog-ally.jpg',
+      'https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:80/plain/https://dashboard.cellphones.com.vn/storage/watch%202%20pro.jpg',
   },
   {
     title: 'The lone tree, majestic landscape of New Zealand',
     subtitle: 'Lorem ipsum dolor sit amet',
     illustration:
-      'https://cdn2.cellphones.com.vn/690x300,webp,q100/https://dashboard.cellphones.com.vn/storage/chao-he-loa-sony-x-series-slide.png',
+      'https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:80/plain/https://dashboard.cellphones.com.vn/storage/m34-ss-th10-norrmal-sli.png',
   },
   {
     title: 'Middle Earth, Germany',
     subtitle: 'Lorem ipsum dolor sit amet',
     illustration:
-      'https://cdn2.cellphones.com.vn/690x300,webp,q100/https://dashboard.cellphones.com.vn/storage/redmi-note12-series-sliding-th6-new-0012.png',
+      'https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:80/plain/https://dashboard.cellphones.com.vn/storage/camon-20-pro-normal-th10-0910-sliding.jpg',
   },
   {
     title: 'Middle Earth, Germany',
     subtitle: 'Lorem ipsum dolor sit amet',
     illustration:
-      'https://cdn2.cellphones.com.vn/690x300,webp,q100/https://dashboard.cellphones.com.vn/storage/hot-30i-sliding-moban.jpg',
+      'https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:80/plain/https://dashboard.cellphones.com.vn/storage/sliding-iphone15-moban-full--ver2.png',
   },
   {
     title: 'Middle Earth, Germany',
     subtitle: 'Lorem ipsum dolor sit amet',
     illustration:
-      'https://cdn2.cellphones.com.vn/690x300,webp,q100/https://dashboard.cellphones.com.vn/storage/eight-m14-new-415.jpg',
+      'https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:80/plain/https://dashboard.cellphones.com.vn/storage/ngay-vang-gia-soc-sliding-001.jpg',
   },
   {
     title: 'Middle Earth, Germany',

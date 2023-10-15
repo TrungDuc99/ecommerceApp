@@ -13,10 +13,10 @@ const CarouselSlider = () => {
     return (
       <View className="px-2" key={index}>
         <Image
-          contentFit="cover"
+          contentFit="contain"
           style={{
             borderRadius: 10,
-            width: WIDTH - 15,
+            width: WIDTH - 30,
             height: ScaleSize(170),
           }}
           source={{ uri: item.illustration }}
@@ -27,8 +27,8 @@ const CarouselSlider = () => {
   return (
     <View className=" " style={styles.container}>
       <Carousel
-        sliderWidth={400}
-        itemWidth={400}
+        sliderWidth={440}
+        itemWidth={425}
         loop
         autoplay={true}
         autoplayInterval={4000}
